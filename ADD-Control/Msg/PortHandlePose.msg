@@ -1,0 +1,7 @@
+string handle
+bool out_of_volume
+bool partially_out_of_volume
+geometry_msgs/Quaternion rotation
+geometry_msgs/Point translation
+float32 indicator_value
+uint32 frame_number

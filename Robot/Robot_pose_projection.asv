@@ -1,0 +1,13 @@
+function [Robot_pose_on_Plane] = Robot_pose_projection(Obv,Robot)
+
+    for item = 1:size(Obv(:,1))
+        X = Obv(item,1);
+        Y = Obv(item,2);
+        Theta = Obv(item,3);
+        Rot = [cos(Theta),-sin(Theta);
+                sin(Theta),cos(Theta)];
+        Robot_pose_on_Plane(item,:) =(Robot(item,:)-[X,Y])*inv(Rot); 
+    end
+
+end
+
