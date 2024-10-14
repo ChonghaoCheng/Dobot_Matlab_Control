@@ -1,5 +1,5 @@
 global Total_step;
-Total_step = 40;
+Total_step = 1000;
 
 Ground_Truth = Get_sensor_data(Total_step);
 

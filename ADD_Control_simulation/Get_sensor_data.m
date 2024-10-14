@@ -13,7 +13,7 @@ function [Disturbance] = Get_sensor_data(step)
     % Disturbance=[X_sensor',Y_sensor',Theta_sensor'];
 
     %% Regular Y Movement
-    % Y_sensor = linspace(0,5,step)';
+    % Y_sensor = linspace(0,20,step)';
     % X_sensor = zeros(step,1);
     % Theta_sensor = zeros(step,1);
     % Disturbance=[X_sensor,Y_sensor,Theta_sensor];
@@ -31,9 +31,9 @@ function [Disturbance] = Get_sensor_data(step)
     % sensor_expand = zeros(3,step);
     % factor = step/20;
     % sensor_expand(:,1:factor:end) = sensor;
-    % X_sensor = sensor_expand(1,:)/20;
-    % Y_sensor = sensor_expand(2,:)/20;   
-    % Theta_sensor = sensor_expand(3,:)/40;
+    % X_sensor = sensor_expand(1,:)/200000;
+    % Y_sensor = sensor_expand(2,:)/200000;   
+    % Theta_sensor = sensor_expand(3,:)/100;
     % 
     % Disturbance=[X_sensor',Y_sensor',Theta_sensor'];
 

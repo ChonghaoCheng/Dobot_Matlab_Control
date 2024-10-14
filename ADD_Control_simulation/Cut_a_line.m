@@ -22,14 +22,14 @@ EM_data = 0;
 int8 step;
 for step =1:Total_step
     %Current paper motion is based on previous paper position
-    EM_data = EM_data+[Update_Line(Ground_Truth(step,:),Ground_Truth(step,1:2)),Ground_Truth(step,3)];
+    % EM_data = EM_data+[Update_Line(Ground_Truth(step,:),Ground_Truth(step,1:2)),Ground_Truth(step,3)];
     
     %Trans paper motion to global base
-    X_obv(end+1,:) = Get_Obv(EM_data); 
+    X_obv(end+1,:) = Get_Obv(Ground_Truth(step,:)); 
 
     %add noise to obv to simulate em reading 
     %Used in cal control only
-    X_obv_N(end+1,:) = Get_Obv_Noise(EM_data);
+    X_obv_N(end+1,:) = Get_Obv_Noise(Ground_Truth(step,:));
 
     X_obv_deviation =Cal_obv_devi(X_obv_N,step,Target_line);
     % X_obv_deviation =Cal_obv_devi(X_obv_Noise,step,Target_line);
