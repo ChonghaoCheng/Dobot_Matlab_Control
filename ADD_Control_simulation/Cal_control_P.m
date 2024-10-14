@@ -1,7 +1,6 @@
-function [Control_value] = Cal_control2(Target_line,Observation,Robot_position,Step,X_obv_deviation,Control_error_sum)
-    Kp = 1.2;
-   
-    Ki = 0.05;
+function [Control_value] = Cal_control_P(Target_line,Observation,Robot_position,Step,X_obv_deviation)
+    Kp = 0.1;
+    
     X_o = Observation(Step,1);
     Y_o = Observation(Step,2);
     Theta_o = Observation(Step,3);
@@ -17,22 +16,24 @@ function [Control_value] = Cal_control2(Target_line,Observation,Robot_position,S
     
     Target_point = Rot*[Aim_x;Aim_y]+[X_o;Y_o];
     
-    X_diff = X_obv_deviation(1);
-    Y_diff = X_obv_deviation(2);
-    Theta_diff = X_obv_deviation(3);
-    Rot = [cos(Theta_diff) -sin(Theta_diff);
-        sin(Theta_diff) cos(Theta_diff)];
-     diff = Rot* [X_diff, Y_diff]';
+    % X_diff = X_obv_deviation(1);
+    % Y_diff = X_obv_deviation(2);
+    % Theta_diff = X_obv_deviation(3);
+    % Rot = [cos(Theta_diff) -sin(Theta_diff);
+    %     sin(Theta_diff) cos(Theta_diff)];
+    %  diff = Rot* [X_diff, Y_diff]';
     % X_move = Target_point(1)-X_rp+Kp*X_diff;
     % Y_move = Target_point(2)-Y_rp+Kp*Y_diff;
-    % X_move = Target_point(1)-X_rp+Kp*(Target_point(1)-X_rp);
-    % Y_move = Target_point(2)-Y_rp+Kp*(Target_point(2)-Y_rp);
-    %     X_move = Target_point(1)-X_rp+Kp*(Target_point(1)-X_rp)+0.08;
+
+    % X_move = Target_point(1)-X_rp+Kp*(Target_point(1)-X_rp)+0.08;
     % Y_move = Target_point(2)-Y_rp+Kp*(Target_point(2)-Y_rp)+0.04;
     % X_move = Target_point(1)-X_rp+Kp*(Target_point(1)-X_rp)+Kp2*diff(1);
     % Y_move = Target_point(2)-Y_rp+Kp*(Target_point(2)-Y_rp)+Kp2*diff(2);
-     X_move = Kp*(Target_point(1)-X_rp)+Ki*Control_error_sum(1);
-    Y_move = Kp*(Target_point(2)-Y_rp)+Ki*Control_error_sum(2);
+    %  X_move = Target_point(1)-X_rp;
+    % Y_move = Target_point(2)-Y_rp;
+    
+    X_move = Target_point(1)-X_rp+Kp*(Target_point(1)-X_rp);
+    Y_move = Target_point(2)-Y_rp+Kp*(Target_point(2)-Y_rp);
 
 
     

@@ -1,5 +1,5 @@
 global Total_step;
-Total_step = 40;
+Total_step = 80;
 
 Ground_Truth = Get_sensor_data(Total_step);
 
@@ -22,9 +22,9 @@ y= linspace(0,longth,Total_step+1);
 % y = (0.01*(x-10).^2)-4;
 % Target_line = (([1,0;0,1/2])*[x;y]+[0;0])';
 
-% SIN Wave Line
-y = sin(x+10);
-Target_line = (([1,0;0,1/2])*[x;y]+[0;0])';
+% SIN Shape Line
+% y = sin(x+10);
+% Target_line = (([1,0;0,1/2])*[x;y]+[0;0])';
 
 
 %Sensor_initialization
