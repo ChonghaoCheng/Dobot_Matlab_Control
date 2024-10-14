@@ -5,21 +5,21 @@ function [Disturbance] = Get_sensor_data()%step)
     %Sensor is attached at the center of the plane
     %Sensor value means it's relative pose to it's previous position
     % 
-    X_sensor = zeros(1,20);
-    Y_sensor = zeros(1,20);
-    Theta_sensor = zeros(1,20);
-    Disturbance=[X_sensor',Y_sensor',Theta_sensor'];
+    % X_sensor = zeros(1,20);
+    % Y_sensor = zeros(1,20);
+    % Theta_sensor = zeros(1,20);
+    % Disturbance=[X_sensor',Y_sensor',Theta_sensor'];
     
     % Y_sensor = [1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0]';
     % X_sensor = zeros(20,1);
     % Theta_sensor = zeros(20,1);
     %  Disturbance=[X_sensor,Y_sensor,Theta_sensor];
     % 
-    % X_sensor = zeros(20,1);
-    % Y_sensor = zeros(20,1);
-    % 
-    % Theta_sensor = 0.0025:0.0025:0.05 ;
-    % Disturbance=[X_sensor,Y_sensor,Theta_sensor'];
+    X_sensor = zeros(20,1);
+    Y_sensor = zeros(20,1);
+
+    Theta_sensor = 0.0025:0.0025:0.05 ;
+    Disturbance=[X_sensor,Y_sensor,Theta_sensor'];
 
     
     % X_sensor = [1,2,-1,-2,1,-1,2,-2,0.1,-0.1]';

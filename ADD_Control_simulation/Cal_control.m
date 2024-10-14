@@ -1,5 +1,5 @@
 function [Control_value] = Cal_control(Target_line,Observation,Robot_position,Step,X_obv_deviation)
-    Kp = 0.14;
+    Kp = 0.2;
     
     X_o = Observation(Step,1);
     Y_o = Observation(Step,2);

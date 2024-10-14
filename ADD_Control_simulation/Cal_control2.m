@@ -1,7 +1,7 @@
 function [Control_value] = Cal_control2(Target_line,Observation,Robot_position,Step,X_obv_deviation,Control_error_sum)
-    Kp = 1.5;
+    Kp = 1.2;
    
-    Ki = 0.04;
+    Ki = 0.05;
     X_o = Observation(Step,1);
     Y_o = Observation(Step,2);
     Theta_o = Observation(Step,3);
