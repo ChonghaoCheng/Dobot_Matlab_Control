@@ -4,7 +4,7 @@
     Include Dobot Driver and using Ros to communicate between EM Sensor and Dobot.
 
 ## Simulation
-    __Run Cut_a_line to start__
+    **Run Cut_a_line.m to start**
     Due to different Movement Trajectory, divide simulation into two part. 
     We can adjust the total number of steps (in Config.m) to compare the results under different sampling rates.
 
