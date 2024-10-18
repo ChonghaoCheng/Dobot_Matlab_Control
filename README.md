@@ -5,6 +5,8 @@
 
 ## Simulation
     Run ** Simulation_(movement types) ** to start
+
+    Due to different Movement Trajectory, divide simulation into two part. 
     We can adjust the total number of steps (in Config.m) to compare the results under different sampling rates.
 
     Three target trajectory types (can be change in Config.m)
