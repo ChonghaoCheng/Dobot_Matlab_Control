@@ -4,7 +4,7 @@
     Include Dobot Driver and using Ros to communicate between EM Sensor and Dobot.
 
 ## Simulation
-    Due to different Movement Trajectory, divide simulation into two part. 
+    Run ** Simulation_(movement types) ** to start
     We can adjust the total number of steps (in Config.m) to compare the results under different sampling rates.
 
     Three target trajectory types (can be change in Config.m)
@@ -24,9 +24,11 @@
 
 
 ### Random movement
-    Assume that the paperboard moves 20 times in total, with each movement evenly spaced throughout the entire motion, remaining stationary at all other times.
+    Assume that the paperboard moves 20 times in total, with each movement evenly spaced throughout the entire motion,
+     remaining stationary at all other times.
     Each movement occurring relative to the position of the previous step.
 
 ### Regular movement(Can be changed in Get_sensor_data.m)
-    Two types of movement: move in Y direction or rotate around the z-axis and the total amount of movement is fixed.
+    Two types of movement: move in Y direction or rotate around the z-axis and the total 
+    amount of movement is fixed.
     The movement relative to the original position of the paperboard.
