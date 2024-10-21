@@ -12,7 +12,7 @@ function [Disturbance] = Get_sensor_data(step)
     % Disturbance=[X_sensor',Y_sensor',Theta_sensor'];
 
     % Regular Y Movement
-    Y_sensor = linspace(0,20,step)';
+    Y_sensor = linspace(0,5,step)';
     X_sensor = zeros(step,1);
     Theta_sensor = zeros(step,1);
     Disturbance=[X_sensor,Y_sensor,Theta_sensor];
