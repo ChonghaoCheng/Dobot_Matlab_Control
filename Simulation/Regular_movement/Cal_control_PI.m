@@ -1,6 +1,6 @@
 function [Control_value] = Cal_control_PI(Target_line,Observation,Robot_position,Step,X_obv_deviation,Control_error_sum)
     Kp = 0.05;
-    Ki = 0.001;
+    Ki = 0.01;
 
     X_o = Observation(Step,1);
     Y_o = Observation(Step,2);
