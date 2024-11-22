@@ -1,8 +1,8 @@
 global Total_step;
 Total_step = 80;
 
-Ground_Truth = Get_sensor_data(Total_step);
-
+% Ground_Truth = Get_Regular_sensor_data(Total_step);
+Ground_Truth = Get_Random_sensor_data(Total_step);
 %plane config
 width = 40;
 longth = 80;
